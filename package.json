@@ -7,7 +7,7 @@
     "install:react": "cd nfeng-admin-react && yarn",
     "start": "npm-run-all --parallel start:*",
     "start:react": "cd nfeng-admin-react && yarn start",
-    "start:vue": "cd nfeng-admin-vue && yarn serve",
+    "start:vue": "cd vue && yarn serve",
     "start:main": "cd nfeng-admin-main && yarn start"
   },
   "devDependencies": {
