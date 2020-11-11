@@ -1,20 +1,18 @@
 <template>
-  <div class="p30 bg-white">
-    <avue-crud
-      v-if="option.column"
-      :page="page"
-      :data="data.data"
-      :option="option"
-      v-model="form"
-      @row-save="create"
-      @row-update="update"
-      @row-del="remove"
-      @on-load="changePage"
-      @sort-change="changeSort"
-      @search-change="search"
-      :upload-before="uploadBefore"
-    ></avue-crud>
-  </div>
+  <avue-crud
+    v-if="option.column"
+    :page="page"
+    :data="data.data"
+    :option="option"
+    v-model="form"
+    @row-save="create"
+    @row-update="update"
+    @row-del="remove"
+    @on-load="changePage"
+    @sort-change="changeSort"
+    @search-change="search"
+    :upload-before="uploadBefore"
+  />
 </template>
 
 <script lang="ts">

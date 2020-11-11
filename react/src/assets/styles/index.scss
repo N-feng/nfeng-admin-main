@@ -1,0 +1,75 @@
+@import '~normalize.css';
+@import './variables.scss';
+
+#root {
+  height: 100%;
+}
+
+.w-100 {
+    width: 100%;
+  }
+  .h-100 {
+    height: 100%;
+  }
+  .d-flex {
+    display: flex;
+  }
+  // color
+  @each $colorKey, $colorValue in $colors {
+    .text-#{$colorKey} {
+      color: $colorValue;
+    }
+    .bg-#{$colorKey} {
+      background-color: $colorValue;
+    }
+  }
+  
+  // font-size
+  @each $font, $fontSize in $fontSizes {
+    .fs-#{$font} {
+      font-size: $fontSize;
+    }
+  }
+  
+  // text-align
+  @each $direction, $value in $directions {
+    .text-#{$value} {
+      text-align: $value;
+    }
+  }
+  
+  // space
+  @each $dKey, $dValue in $directions {
+    @each $spaceKey, $spaceValue in $spaces {
+      .m#{$dKey}-#{$spaceKey} {
+        margin-#{$dValue}: $spaceValue;
+      }
+      .p#{$dKey}-#{$spaceKey} {
+        padding-#{$dValue}: $spaceValue;
+      }
+      @if $dKey == 'l' {
+        .mx-#{$spaceKey} {
+          margin: 0 $spaceValue;
+        }
+        .px-#{$spaceKey} {
+          padding: 0 $spaceValue;
+        }
+      }
+      @if $dKey == 't' {
+        .my-#{$spaceKey} {
+          margin: $spaceValue 0;
+        }
+        .py-#{$spaceKey} {
+          padding: $spaceValue 0;
+        }
+      }
+      @if $dKey == 'r' {
+        .m#{$spaceKey} {
+          margin: $spaceValue;
+        }
+        .p#{$spaceKey} {
+          padding: $spaceValue;
+        }
+      }
+    }
+  }

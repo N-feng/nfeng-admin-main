@@ -124,7 +124,7 @@ const routes = [
     meta: {
       title: 'The front desk',
     },
-    component: () => import('@/views/Main.vue'),
+    component: () => import('@/layout/nf-content/index.vue'),
     children: [
       {
         path: '/index',

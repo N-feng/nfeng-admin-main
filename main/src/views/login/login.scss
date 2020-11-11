@@ -1,0 +1,87 @@
+@import '../../assets/styles/color.scss';
+
+.login-container {
+  background-image: linear-gradient(45deg, #9fbaa8, #31354c);
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .client-bg {
+    width: 50%;
+    max-width: 800px;
+    min-width: 400px;
+  }
+
+  .login-panel {
+    width: 450px;
+    padding: 55px 35px;
+    margin-left: 100px;
+    background-color: $white;
+    border-radius: 11px;
+    box-shadow: 0 6px 22px 0 rgba(51, 62, 153, 0.7);
+  }
+
+  .title {
+    font-size: 24px;
+    color: $lighter-black;
+    text-align: center;
+    margin: 0 0 24px 0;
+    font-weight: bold;
+  }
+
+  .login-form {
+    input {
+      border: none;
+    }
+
+    input.default-input,
+    .ant-input-password {
+      height: 56px;
+      background: $gray;
+      border-radius: 4px;
+    }
+
+    input.active-input,
+    .ant-input-password {
+      height: 56px;
+      background: $white;
+      border-radius: 4px;
+      border: 1px solid #d9d9d9;
+    }
+  }
+
+  .ant-input-password {
+    padding: 0;
+    border: none;
+    input {
+      padding: 4px 30px 4px 11px;
+    }
+    .ant-input-suffix {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      color: rgba(0,0,0,.65);
+      transform: translateY(-50%);
+    }
+  }
+
+  .submit-button {
+    width: 100%;
+    border: none;
+    height: 56px;
+    background: $bg-blue;
+    border-radius: 4px;
+    color: $white;
+    font-size: 20px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: #fff;
+      background-color: #40a9ff;
+      border-color: #40a9ff;
+    }
+  }
+}

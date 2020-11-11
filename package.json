@@ -1,14 +1,15 @@
 {
+  "license": "UNLICENSED",
   "scripts": {
     "clone:all": "bash ./scripts/clone-all.sh",
     "install": "npm-run-all --serial install:*",
-    "install:main": "cd nfeng-admin-main && yarn",
-    "install:vue": "cd nfeng-admin-vue && yarn",
-    "install:react": "cd nfeng-admin-react && yarn",
+    "install:main": "cd main && yarn",
+    "install:vue": "cd vue && yarn",
+    "install:react": "cd react && yarn",
     "start": "npm-run-all --parallel start:*",
-    "start:react": "cd nfeng-admin-react && yarn start",
+    "start:react": "cd react && yarn start",
     "start:vue": "cd vue && yarn serve",
-    "start:main": "cd nfeng-admin-main && yarn start"
+    "start:main": "cd main && yarn start"
   },
   "devDependencies": {
     "npm-run-all": "^4.1.5"
